@@ -1,0 +1,17 @@
+{
+  "name": "zrajewska-portfolio",
+  "description": "smis-web",
+  "main": "index.js",
+  "authors": [
+    "Nando Rossi <talk@nan.do>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
