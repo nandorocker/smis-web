@@ -23,4 +23,7 @@ Thumbs.db
 ## Managers ##
 node_modules
 bower_components
+
+## Production/Temp dirs ##
 dist
+.tmp
