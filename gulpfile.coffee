@@ -165,7 +165,7 @@ gulp.task 'styles', ->
 #
 gulp.task 'fonts', ->
   gulp.src([
-    'bower_components/bootstrap-sass/assets/fonts/**/*'
+    config.sourceDir + '/fonts/**/*'
     'bower_components/monosocialiconsfont/**/MonoSocialIconsFont-1.10.*'
   ])
 

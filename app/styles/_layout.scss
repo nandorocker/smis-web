@@ -1,0 +1,88 @@
+.topNav {
+	@include flex-grid-row();
+	padding-bottom: 4rem;
+
+	.logo {
+		@include flex-grid-column(12);
+		text-align: center;
+		img {
+			width: 40%;
+		}
+
+		@include breakpoint(medium up) {
+			@include flex-grid-column(2);
+			text-align: left;
+			width: auto;
+
+			img {
+				width: auto;
+			}
+		}
+
+		@include breakpoint(large up) {
+			@include flex-grid-column(1);
+		}
+	}
+
+	.availability {
+		@include flex-grid-column(12);
+		text-align: center;
+
+		@include breakpoint(medium up) {
+			@include flex-grid-column(10);
+			text-align: right;
+		}
+
+		@include breakpoint(large up) {
+			@include flex-grid-column(11);
+		}
+	}
+}
+
+.projects {
+	> header {
+		@include flex-grid-row();
+		margin-bottom: 6rem;
+	}
+
+	.work {
+		@include flex-grid-row();
+		// padding-bottom: 2rem;
+		img {
+			padding-bottom: 2rem;
+			opacity: 0;
+			transition: opacity .3s ease-in;
+		}
+
+		noscript img {
+			opacity: 1;
+		}
+	}
+}
+
+.footer {
+	// Foundation class for equal columns
+	@include flex-grid-row();
+	@include flex-grid-layout(1);
+	border-top: 3px solid #eaca80;
+	padding-top: 30px;
+	padding-bottom: 70px;
+
+	@include breakpoint(small only) {
+		text-align: center;
+	}
+
+	@include breakpoint(medium up) {
+		@include flex-grid-layout(4);
+	}
+
+	.column {
+		@include breakpoint(small only) {
+			margin: 1rem 0;
+		}
+	}
+
+	.logo {
+		width: 3rem;
+	}
+}

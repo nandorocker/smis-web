@@ -1,0 +1,31 @@
+// 4. Base Typography
+// ------------------
+$body-font-family: 'acremedium', Helvetica, Roboto, Arial, sans-serif;
+$foundation-palette: (
+  primary: #eaca80,
+  secondary: #777,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #ec5840,
+);
+$header-font-family: 'Lato', Helvetica, Roboto, Arial, sans-serif;
+$header-font-weight: 800;
+$header-lineheight: 1.1;
+$header-sizes: (
+  small: (
+    'h1': 30,
+    'h2': 20,
+    'h3': 19,
+    'h4': 18,
+    'h5': 17,
+    'h6': 16,
+  ),
+  medium: (
+    'h1': 55,
+    'h2': 40,
+    'h3': 31,
+    'h4': 25,
+    'h5': 20,
+    'h6': 16,
+  ),
+);
