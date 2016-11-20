@@ -26,6 +26,9 @@ htmlReplace =  require('gulp-html-replace')   # Replaces stuff on HTML
 spawn = require('child_process').spawn  # for Gulp restart when gulpfile.js or config.js files are changed
 exec = require('child_process').exec   #execute commands
 
+# reload = ->
+#   return browserSync.reload
+
 #
 # C O N F I G
 # ===========
@@ -247,7 +250,8 @@ gulp.task 'deploy', (cb) ->
 #
 
 gulp.task 'watch', ->
-  gulp.watch(config.sourceDir + '/**/*.pug', [ 'html' ]).on 'change', browserSync.reload
+
+  gulp.watch config.sourceDir + '/**/*.pug', [ 'watch:pug' ]
   gulp.watch config.sourceDir + '/scripts/**/*.js', [ 'scripts' ]
   gulp.watch config.sourceDir + '/**/*.{jpg,png,svg,ico,gif}', [ 'images' ]
   gulp.watch config.sourceDir + '/styles/**/*.{scss,sass}', [
@@ -255,6 +259,10 @@ gulp.task 'watch', ->
   ]
   gulp.watch config.sourceDir + '/fonts/**/*', [ 'fonts' ]
   return
+
+gulp.task 'watch:pug', [ 'html' ], (done) ->
+  browserSync.reload()
+  done()
 
 # Gulp restart when gulpfile.js or config.js files are changed
 gulp.task 'watch:gulp', ->
