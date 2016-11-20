@@ -8,7 +8,7 @@
   padding-top: 2.4em;
 
   &.color1 {
-    background-color: #ffe5e4;
+    background-color: map-get($project-palette, pink);
   }
 
   &.color2 {
@@ -21,25 +21,25 @@
 
   &.sawtooth-1-2 {
     &:after {
-      @include sawtooth(#ffe5e4,#CED0CD);
+      @include sawtooth(map-get($project-palette, pink),map-get($project-palette, gray-lite));
     }
   }
 
   &.sawtooth-2-3 {
     &:after {
-      @include sawtooth(#CED0CD,#FFF);
+      @include sawtooth(map-get($project-palette, gray-lite),#FFF);
     }
   }
 
   &.sawtooth-3-2 {
     &:after {
-      @include sawtooth(#FFF,#CED0CD);
+      @include sawtooth(#FFF,map-get($project-palette, gray-lite));
     }
   }
 
   &.sawtooth-3-1 {
     &:after {
-      @include sawtooth(#CED0CD,#ffe5e4);
+      @include sawtooth(map-get($project-palette, gray-lite),map-get($project-palette, pink));
     }
   }
 }
@@ -75,7 +75,6 @@
 // Footer
 .footer {
   background-image: url('../images/white_marble_texture.jpg');
-  margin-top: 3em;
   padding-top: 1.5em;
   padding-bottom: 3.5em;
 

@@ -1,5 +1,12 @@
-$body-background: #ffe5e4;
-$body-font-color: #333;
+$project-palette: (
+  pink: #ffe5e4,
+  black: #333,
+  gray: #666,
+  gray-lite: #CED0CD
+);
+
+$body-background: map-get($project-palette, gray);
+$body-font-color: map-get($project-palette, black);
 
 // Buttons
 $button-background: transparent;
