@@ -1,8 +1,15 @@
+$body-background: #ffe5e4;
+$body-font-color: #333;
+
+// Buttons
+$button-background: transparent;
+$button-color: $body-font-color;
+
 // 4. Base Typography
 // ------------------
 $body-font-family: 'acremedium', Helvetica, Roboto, Arial, sans-serif;
 $foundation-palette: (
-  primary: #eaca80,
+  primary: #333,
   secondary: #777,
   success: #3adb76,
   warning: #ffae00,
@@ -13,9 +20,9 @@ $header-font-weight: 800;
 $header-lineheight: 1.1;
 $header-sizes: (
   small: (
-    'h1': 30,
-    'h2': 20,
-    'h3': 19,
+    'h1': 36,
+    'h2': 26,
+    'h3': 20,
     'h4': 18,
     'h5': 17,
     'h6': 16,

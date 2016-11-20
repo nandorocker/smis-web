@@ -1,88 +1,85 @@
-.topNav {
-	@include flex-grid-row();
-	padding-bottom: 4rem;
-
-	.logo {
-		@include flex-grid-column(12);
-		text-align: center;
-		img {
-			width: 40%;
-		}
-
-		@include breakpoint(medium up) {
-			@include flex-grid-column(2);
-			text-align: left;
-			width: auto;
-
-			img {
-				width: auto;
-			}
-		}
-
-		@include breakpoint(large up) {
-			@include flex-grid-column(1);
-		}
-	}
-
-	.availability {
-		@include flex-grid-column(12);
-		text-align: center;
-
-		@include breakpoint(medium up) {
-			@include flex-grid-column(10);
-			text-align: right;
-		}
-
-		@include breakpoint(large up) {
-			@include flex-grid-column(11);
-		}
-	}
+// Top Navigation
+.main-nav {
+  display: none;
 }
 
-.projects {
-	> header {
-		@include flex-grid-row();
-		margin-bottom: 6rem;
-	}
+// Each section is a cell. Different HTML elements can use this.
+.cell {
+  padding-top: 2.4em;
 
-	.work {
-		@include flex-grid-row();
-		// padding-bottom: 2rem;
-		img {
-			padding-bottom: 2rem;
-			opacity: 0;
-			transition: opacity .3s ease-in;
-		}
+  &.color1 {
+    background-color: #ffe5e4;
+  }
 
-		noscript img {
-			opacity: 1;
-		}
-	}
+  &.color2 {
+    background-color: #CED0CD;
+  }
+
+  &.color3 {
+    background-color: #fff;
+  }
+
+  &.sawtooth-1-2 {
+    &:after {
+      @include sawtooth(#ffe5e4,#CED0CD);
+    }
+  }
+
+  &.sawtooth-2-3 {
+    &:after {
+      @include sawtooth(#CED0CD,#FFF);
+    }
+  }
+
+  &.sawtooth-3-2 {
+    &:after {
+      @include sawtooth(#FFF,#CED0CD);
+    }
+  }
+
+  &.sawtooth-3-1 {
+    &:after {
+      @include sawtooth(#CED0CD,#ffe5e4);
+    }
+  }
 }
 
+// Buttons
+.button {
+  display: block;
+  border: 1px solid $body-font-color;
+  width: 80%;
+  // margin-left: auto;
+  // margin-right: auto;
+  margin: 4em auto;
+}
+
+// Social icons
+.social {
+    ul {
+        // @include list-unstyled();
+        margin-top: 1rem;
+    }
+
+    li {
+        display: inline-block;
+        // margin-left: 0.5em;
+        // margin-right: 0.5em;
+    }
+
+    .symbol, .symbol::before {
+        font-size: 3em;
+    }
+}
+
+// Footer
 .footer {
-	// Foundation class for equal columns
-	@include flex-grid-row();
-	@include flex-grid-layout(1);
-	border-top: 3px solid #eaca80;
-	padding-top: 30px;
-	padding-bottom: 70px;
+  background-image: url('../images/white_marble_texture.jpg');
+  margin-top: 3em;
+  padding-top: 1.5em;
+  padding-bottom: 3.5em;
 
-	@include breakpoint(small only) {
-		text-align: center;
-	}
-
-	@include breakpoint(medium up) {
-		@include flex-grid-layout(4);
-	}
-
-	.column {
-		@include breakpoint(small only) {
-			margin: 1rem 0;
-		}
-	}
-
-	.logo {
-		width: 3rem;
-	}
+  & ul {
+    margin-bottom: 0;
+  }
 }
