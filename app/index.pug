@@ -1,6 +1,15 @@
 extends /_layouts/default.pug
 
 block content
+  header#top
+    nav.main-nav
+      ul.menu.align-center
+        li #[a(href="#about") About]
+        li #[a(href="#works") Works]
+        li #[a(href="#contact") Contact]
+
+    img(src="images/logo-blackcircle.svg").bigLogo
+
   section#about
     header.row.align-center.cell.color1.sawtooth-1-2
       .small-10.columns
