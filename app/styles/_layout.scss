@@ -13,6 +13,12 @@
     width: 100%;
     padding-bottom: 6em;
     padding-top: 1em;
+
+    li > a, li > a:hover, li > a:active, li > a:visited {
+      text-decoration: none;
+      padding-left: 1.4em;
+      padding-right: 1.4em;
+    }
   }
 
   // Home Logo
@@ -24,7 +30,13 @@
 
 // Each section is a cell. Different HTML elements can use this.
 .cell {
-  padding-top: 2.4em;
+  padding-top: 2em;
+  // min-height: 75%;
+  // min-height: 75vh;
+  //
+  // @media screen and (min-height: 900px) {
+  //     min-height: 480px;
+  // }
 
   &.color1 {
     background-color: map-get($project-palette, pink);
@@ -68,9 +80,8 @@
   display: block;
   border: 1px solid $body-font-color;
   width: 80%;
-  // margin-left: auto;
-  // margin-right: auto;
   margin: 4em auto;
+  text-decoration: none;
 }
 
 // Social icons
@@ -88,6 +99,10 @@
 
     .symbol, .symbol::before {
         font-size: 3em;
+    }
+
+    a, a:hover, a:active, a:visited {
+      text-decoration: none;
     }
 }
 
