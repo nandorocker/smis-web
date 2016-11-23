@@ -1,4 +1,5 @@
 @mixin sawtooth($color) {
+  // Sawtooth border based on this: http://bradsknutson.com/blog/css-zig-zag-border/
   position   : relative;
   width      : 100%;
   background : $color;
