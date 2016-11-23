@@ -19,8 +19,8 @@
 @import 'bower_components/slick-carousel/slick/slick-theme.scss';
 
 // Import SMACSS parts
-// @import 'base';
-// @import 'module';
+@import 'base';
+@import 'module';
 @import 'layout';
 
 // Testing classes (remove these)
