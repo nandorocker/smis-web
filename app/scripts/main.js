@@ -1,6 +1,13 @@
 $( document ).ready(function() {
   // console.log( "ready!" );
-  $('.work-gallery').slick({
+
+  // Count carousel instances on page (items with class .work-gallery)
+  // Add a unique ID to each carousel
+  var carouselCount = $('.work-gallery').length;
+
+  // Slick Carousel Configuration
+
+  var slickSettings = {
     // autoplay: true,
     // autoplaySpeed: 2000,
     settings: {
@@ -16,5 +23,10 @@ $( document ).ready(function() {
         settings: { arrows: true }
       }
     ]
-  });
+  };
+
+  // Activate every carousel on the page
+  for (i = 1; i <= carouselCount; i++){
+    $('#gallery_' + i).slick(slickSettings);
+  }
 });
