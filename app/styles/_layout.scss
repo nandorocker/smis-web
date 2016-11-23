@@ -43,11 +43,18 @@
 // Works
 
 #works {
+
   .cell {
     @include sawtooth(map-get($project-palette, graylite));
 
     &:nth-child(even) {
       @include sawtooth(#fff);
+
+      // Customize carousel arrows
+      .slick-prev::before,
+      .slick-next::before {
+        color: map-get($project-palette, gray);
+      }
     }
   }
 }
@@ -57,14 +64,12 @@
 
   .gallery-item {
     margin-top: 1.5em;
-
-    // No top margin if slick is loaded
-    // &.slick-slide {
-    //   margin-top: 0 !important;
-    // }
   }
 }
 
+// Slick Carousel Settings
+
+// No top margin if slick is loaded
 .slick-slide {
   margin-top: 0;
 }
