@@ -1,19 +1,18 @@
 extends /_layouts/default.pug
 
 block content
-  header#top.row.align-center
-    nav.main-nav.small-12.column
-      ul.menu.align-center
+  header#top.masthead
+    nav.main-nav
+      ul
         li #[a(href="#about") About]
         li #[a(href="#works") Works]
         li #[a(href="#contact") Contact]
-
-    .logo.small-6.medium-2.columns
-      img(src="images/logo-blackcircle.svg").bigLogo
+    .logo
+      img(src="images/logo-blackcircle.svg")
 
   section#about
-    header.row.align-center.cell.header
-      .small-10.large-8.columns
+    header.cell.panel
+      .content
         h1 Hello
         p My name is Zuzanna Rajewska. I'm a Berlin-based freelance designer with a background in Fine Arts, passionate and inspired by minimal and modern design. I have an eye for color, styles and trends.
         p I've done work for some big brands like Microsoft and eBay, as well as renowned underground bands and venues. Projects include design of event materials, icons, banners, posters, album artwork and more.
@@ -22,65 +21,65 @@ block content
         p: a(href="").button Download my resume
 
   section#works
-      article.row.align-center.cell
-        .small-10.large-8.columns
+      article.cell
+        .content
           h2 Microsoft Build conference
           p Designs for printed and digital materials for Microsoft Build conference in Warsaw, Poland (2016). Project includes interior design elements, lanyards, posters, streeming graphics etc. I had to strictly follow brand and event guidelines.
 
-        #gallery_1.small-12.medium-10.large-8.columns.work-gallery
+        #gallery_1.work-gallery
           .gallery-item: img(src="http://unsplash.it/1024/768?image=0")
           .gallery-item: img(src="http://unsplash.it/1024/768?image=10")
           .gallery-item: img(src="http://unsplash.it/1024/768?image=20")
 
-      article.row.align-center.cell
-        .small-10.large-8.columns
+      article.cell
+        .content
           h2 Watches for Avon
           p Watches designs with leopard pattern motive. Shape of the watch case and theme was specified in the client’s brief.
 
-        #gallery_2.small-12.medium-10.large-8.columns.work-gallery
+        #gallery_2.work-gallery
           .gallery-item: img(src="http://unsplash.it/1024/768?image=0")
           .gallery-item: img(src="http://unsplash.it/1024/768?image=10")
           .gallery-item: img(src="http://unsplash.it/1024/768?image=20")
 
-      article.row.align-center.cell
-        .small-10.large-8.columns
+      article.cell
+        .content
           h2 Cover for Partia
           p Cover design for legendary Warsaw’s alternative band Partia (1993-2003). Record consists a live recordings of the last band’s concert. Image used on the cover comes from Karel Saudek - czech comic book illustrator. The goal was to design a cover similar to previous ones, but also make it look more modern.
 
-        #gallery_3.small-12.medium-10.large-8.columns.work-gallery
+        #gallery_3.work-gallery
           .gallery-item: img(src="http://unsplash.it/1024/768?image=0")
           .gallery-item: img(src="http://unsplash.it/1024/768?image=10")
           .gallery-item: img(src="http://unsplash.it/1024/768?image=20")
 
-      article.row.align-center.cell
-        .small-10.large-8.columns
+      article.cell
+        .content
           h2 Banners for eBay
           p Banners are made according to new brand guide lines (color groups, font designed specially for eBay, not posed and simple mood images, products on a plain background).
 
-        #gallery_4.small-12.medium-10.large-8.columns.work-gallery
+        #gallery_4.work-gallery
           .gallery-item: img(src="http://unsplash.it/1024/768?image=0")
           .gallery-item: img(src="http://unsplash.it/1024/768?image=10")
           .gallery-item: img(src="http://unsplash.it/1024/768?image=20")
 
-      article.row.align-center.cell
-        .small-10.large-8.columns
+      article.cell
+        .content
           h2 Moodboards for Oriflame
           p Moodboards for possible fashion trends in 2015 and examples of products (jewellery, watches, bags and accesories).
 
-        #gallery_5.small-12.medium-10.large-8.columns.work-gallery
+        #gallery_5.work-gallery
           .gallery-item: img(src="http://unsplash.it/1024/768?image=0")
           .gallery-item: img(src="http://unsplash.it/1024/768?image=10")
           .gallery-item: img(src="http://unsplash.it/1024/768?image=20")
 
-  section#see_more.row.align-center.cell.panel
-    .small-10.large-8.columns
+  section#see_more.cell.panel
+    .content
       h2 See More
       p Too see more projects visit my Behance profile.
 
       a(href="http://behance.com/rajewska", title="Behance").button Behance
 
-  section#contact.row.align-center.cell.panel
-    .small-10.large-8.columns
+  section#contact.cell.panel
+    .content
       h2 Let's Work Together
       p If you like my works and feel like you want to work with me, feel free to let me know about it! I’m open for different projects.
 
