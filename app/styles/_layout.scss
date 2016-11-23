@@ -40,6 +40,10 @@
   // @media screen and (min-height: 900px) {
   //     min-height: 480px;
   // }
+
+  &.panel {
+    background-color: map-get($project-palette, pink);
+  }
 }
 
 // Works
