@@ -1,52 +1,55 @@
 // // Top nav
+
 #top {
-  background-color: map-get($project-palette, pink);
-
+  background-color : map-get($project-palette, pink);
   // Nav Links
-  .main-nav {
-    background-image: url('../images/white_marble_texture.jpg');
-    text-transform: uppercase;
-    padding-bottom: 6em;
-    padding-top: 1em;
 
-    li > a, li > a:hover, li > a:active, li > a:visited {
-      text-decoration: none;
-      padding-left: 1.4em;
-      padding-right: 1.4em;
+  .main-nav {
+    padding-top      : 1em;
+    padding-bottom   : 6em;
+    background-image : url('../images/white_marble_texture.jpg');
+    text-transform   : uppercase;
+
+    li > a,
+    li > a:active,
+    li > a:hover,
+    li > a:visited {
+      padding-right   : 1.4em;
+      padding-left    : 1.4em;
+      text-decoration : none;
     }
   }
-
   // Home Logo
+
   .bigLogo {
-    margin-top: -5em;
-    width: 10em;
+    width      : 10em;
+    margin-top : -5em;
   }
 }
 
 // Header
+
 .header {
-  @include sawtooth(map-get($project-palette, pink),map-get($project-palette, graylite));
+  background-color : map-get($project-palette, pink);
+  // @include sawtooth(map-get($project-palette, pink),map-get($project-palette, graylite));
 }
 
 // Each section is a cell. Different HTML elements can use this.
-.cell {
-  padding-top: 2em;
-  padding-bottom: 6em;
 
+.cell {
+  padding-top    : 2em;
+  padding-bottom : 6em;
   // background-color: map-get($project-palette, pink);
   // min-height: 55%;
   // min-height: 55vh;
   //
   // @media screen and (min-height: 900px) {
-  //     min-height: 480px;
-  // }
-
-  &.panel {
-    background-color: map-get($project-palette, pink);
-  }
+  // min-height: 480px;
+  //
 }
 
 // Works
+
 #works {
   .cell {
     @include sawtooth(map-get($project-palette, graylite));
@@ -58,47 +61,54 @@
 }
 
 .gallery {
-  margin-top: 2em;
+  margin-top : 2em;
 }
 
 // Buttons
+
 .button {
-  display: block;
-  border: 1px solid $body-font-color;
-  width: 80%;
-  margin: 4em auto;
-  text-decoration: none;
+  display         : block;
+  width           : 80%;
+  margin          : 4em auto;
+  border          : 1px solid $body-font-color;
+  text-decoration : none;
 }
 
 // Social icons
+
 .social {
-    ul {
-        // @include list-unstyled();
-        margin-top: 1rem;
-    }
+  ul {
+    // @include list-unstyled();
+    margin-top : 1rem;
+  }
 
-    li {
-        display: inline-block;
-        // margin-left: 0.5em;
-        // margin-right: 0.5em;
-    }
+  li {
+    display : inline-block;
+    // margin-left: 0.5em;
+    // margin-right: 0.5em;
+  }
 
-    .symbol, .symbol::before {
-        font-size: 3em;
-    }
+  .symbol,
+  .symbol::before {
+    font-size : 3em;
+  }
 
-    a, a:hover, a:active, a:visited {
-      text-decoration: none;
-    }
+  a,
+  a:active,
+  a:hover,
+  a:visited {
+    text-decoration : none;
+  }
 }
 
 // Footer
+
 .footer {
-  background-image: url('../images/white_marble_texture.jpg');
-  padding-top: 1.5em;
-  padding-bottom: 3.5em;
+  padding-top      : 1.5em;
+  padding-bottom   : 3.5em;
+  background-image : url('../images/white_marble_texture.jpg');
 
   & ul {
-    margin-bottom: 0;
+    margin-bottom : 0;
   }
 }
