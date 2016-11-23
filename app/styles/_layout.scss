@@ -75,6 +75,10 @@
   margin-top : 0;
 }
 
+.slick-prev:before, .slick-next:before {
+  font-size: 36px;
+}
+
 // See more
 
 #see_more {
