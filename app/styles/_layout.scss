@@ -1,16 +1,11 @@
-// Top nav
+// // Top nav
 #top {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   background-color: map-get($project-palette, pink);
 
   // Nav Links
   .main-nav {
     background-image: url('../images/white_marble_texture.jpg');
     text-transform: uppercase;
-    width: 100%;
     padding-bottom: 6em;
     padding-top: 1em;
 
@@ -28,51 +23,44 @@
   }
 }
 
+// Header
+.header {
+  @include sawtooth(map-get($project-palette, pink),map-get($project-palette, graylite));
+}
+
 // Each section is a cell. Different HTML elements can use this.
 .cell {
   padding-top: 2em;
-  // min-height: 75%;
-  // min-height: 75vh;
+  padding-bottom: 6em;
+
+  // background-color: map-get($project-palette, pink);
+  // min-height: 55%;
+  // min-height: 55vh;
   //
   // @media screen and (min-height: 900px) {
   //     min-height: 480px;
   // }
 
-  &.color1 {
+  &.panel {
     background-color: map-get($project-palette, pink);
   }
+}
 
-  &.color2 {
-    background-color: #CED0CD;
-  }
-
-  &.color3 {
-    background-color: #fff;
-  }
-
-  &.sawtooth-1-2 {
-    &:after {
-      @include sawtooth(map-get($project-palette, pink),map-get($project-palette, gray-lite));
+// Works
+#works {
+  .cell {
+    background-color: map-get($project-palette, graylite);
+    // @include sawtooth(map-get($project-palette, graylite),#fff);
+    //
+    &:nth-child(even) {
+      background-color: #fff;
+    //   @include sawtooth(#fff,map-get($project-palette, graylite));
     }
   }
+}
 
-  &.sawtooth-2-3 {
-    &:after {
-      @include sawtooth(map-get($project-palette, gray-lite),#FFF);
-    }
-  }
-
-  &.sawtooth-3-2 {
-    &:after {
-      @include sawtooth(#FFF,map-get($project-palette, gray-lite));
-    }
-  }
-
-  &.sawtooth-3-1 {
-    &:after {
-      @include sawtooth(map-get($project-palette, gray-lite),map-get($project-palette, pink));
-    }
-  }
+.gallery {
+  margin-top: 2em;
 }
 
 // Buttons

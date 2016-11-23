@@ -1,15 +1,10 @@
 @mixin sawtooth($color1, $color2) {
-  content: " ";
-  display:block;
-  position: relative;
-  top:0px;
-  left:0px;
-  width:100%;
-  height:90px;
   background: linear-gradient($color1 0%, transparent 0%), linear-gradient(135deg, $color2 33.33%, transparent 33.33%) 0 0%, $color2 linear-gradient(45deg, $color2 33.33%, $color1 33.33%) 0 0%;
   background: -webkit-linear-gradient($color1 0%, transparent 0%), -webkit-linear-gradient(135deg, $color2 33.33%, transparent 33.33%) 0 0%, $color2 -webkit-linear-gradient(45deg, $color2 33.33%, $color1 33.33%) 0 0%;
   background: -o-linear-gradient($color1 0%, transparent 0%), -o-linear-gradient(135deg, $color2 33.33%, transparent 33.33%) 0 0%, $color2 -o-linear-gradient(45deg, $color2 33.33%, $color1 33.33%) 0 0%;
   background: -moz-linear-gradient($color1 0%, transparent 0%), -moz-linear-gradient(135deg, $color2 33.33%, transparent 33.33%) 0 0%, $color2 -moz-linear-gradient(45deg, $color2 33.33%, $color1 33.33%) 0 0%;
+  background-position: left 0 bottom 0;
   background-repeat: repeat-x;
   background-size: 0px 100%, 54px 81px, 54px 81px;
+  background-color: $color1;
 }

@@ -203,8 +203,7 @@ gulp.task 'scripts', ->
   # Copy vendor files to output dir
   vendor = gulp.src([
     'bower_components/jquery/dist/jquery.min.*'
-    'bower_components/jquery-unveil/jquery.unveil.min.*'
-
+    'bower_components/foundation-sites/dist/foundation.min.js'
   ])
 
   .pipe(gulp.dest(config.outputDir + '/scripts/vendor'))

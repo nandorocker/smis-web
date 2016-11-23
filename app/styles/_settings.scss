@@ -2,7 +2,7 @@ $project-palette: (
   pink: #ffe5e4,
   black: #333,
   gray: #666,
-  gray-lite: #CED0CD
+  graylite: #CED0CD
 );
 
 $body-background: map-get($project-palette, gray);
