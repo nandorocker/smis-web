@@ -49,12 +49,10 @@
 // Works
 #works {
   .cell {
-    background-color: map-get($project-palette, graylite);
-    // @include sawtooth(map-get($project-palette, graylite),#fff);
-    //
-    &:nth-child(even) {
-      background-color: #fff;
-    //   @include sawtooth(#fff,map-get($project-palette, graylite));
+    @include sawtooth(map-get($project-palette, graylite));
+
+    &:nth-child(odd) {
+      @include sawtooth(#fff);
     }
   }
 }
