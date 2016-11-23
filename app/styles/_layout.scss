@@ -40,42 +40,6 @@
   // @media screen and (min-height: 900px) {
   //     min-height: 480px;
   // }
-
-  // &.color1 {
-  //   background-color: map-get($project-palette, pink);
-  // }
-  //
-  // &.color2 {
-  //   background-color: #CED0CD;
-  // }
-  //
-  // &.color3 {
-  //   background-color: #fff;
-  // }
-  //
-  // &.sawtooth-1-2 {
-  //   &:after {
-  //     @include sawtooth(map-get($project-palette, pink),map-get($project-palette, gray-lite));
-  //   }
-  // }
-  //
-  // &.sawtooth-2-3 {
-  //   &:after {
-  //     @include sawtooth(map-get($project-palette, gray-lite),#FFF);
-  //   }
-  // }
-  //
-  // &.sawtooth-3-2 {
-  //   &:after {
-  //     @include sawtooth(#FFF,map-get($project-palette, gray-lite));
-  //   }
-  // }
-  //
-  // &.sawtooth-3-1 {
-  //   &:after {
-  //     @include sawtooth(map-get($project-palette, gray-lite),map-get($project-palette, pink));
-  //   }
-  // }
 }
 
 // Works
