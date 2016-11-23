@@ -10,17 +10,25 @@ $( document ).ready(function() {
   var slickSettings = {
     // autoplay: true,
     // autoplaySpeed: 2000,
-    settings: {
-      // Hide arrows on small size
-      arrows: false
-    },
+    slidesToShow: 1,
+    slidesToScroll: 1,
+
     responsive: [
       {
-        // This should be em but doesn't work
-        breakpoint: 640,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        settings: { arrows: true }
+        breakpoint: 600,
+        settings: {
+          arrows: true,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
       }
     ]
   };
