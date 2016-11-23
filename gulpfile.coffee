@@ -134,8 +134,6 @@ gulp.task 'styles', ->
     # Include paths to components (add/remove manually)
     includePaths: [
       'bower_components/foundation-sites/scss'
-      # 'bower_components/sass-mq'
-      # 'bower_components/monosocialiconsfont'
     ]
 
     outputStyle: outputStyle
@@ -170,6 +168,7 @@ gulp.task 'fonts', ->
   gulp.src([
     config.sourceDir + '/fonts/**/*'
     'bower_components/monosocialiconsfont/**/MonoSocialIconsFont-1.10.*'
+    'bower_components/slick-carousel/slick/fonts/slick.*'
   ])
 
   # Stop gulp from crashing on errors
@@ -188,7 +187,6 @@ gulp.task 'scripts', ->
 
   # Minify and copy all JavaScript (except vendor scripts)
   js = gulp.src(config.sourceDir + '/scripts/**/*.js')
-  # gulp.src(config.sourceDir + '/scripts/**/*.js')
 
   # Stop gulp from crashing on errors
   .pipe(plumber(config.plumber))
@@ -204,6 +202,7 @@ gulp.task 'scripts', ->
   vendor = gulp.src([
     'bower_components/jquery/dist/jquery.min.*'
     'bower_components/foundation-sites/dist/foundation.min.js'
+    'bower_components/slick-carousel/slick/slick.js'
   ])
 
   .pipe(gulp.dest(config.outputDir + '/scripts/vendor'))
