@@ -134,6 +134,7 @@ gulp.task 'styles', ->
     # Include paths to components (add/remove manually)
     includePaths: [
       'bower_components/foundation-sites/scss'
+      'bower_components/font-awesome/scss'
     ]
 
     outputStyle: outputStyle
@@ -168,7 +169,8 @@ gulp.task 'fonts', ->
   gulp.src([
     config.sourceDir + '/fonts/**/*'
     'bower_components/monosocialiconsfont/**/MonoSocialIconsFont-1.10.*'
-    'bower_components/slick-carousel/slick/fonts/slick.*'
+    # 'bower_components/slick-carousel/slick/fonts/slick.*'
+    'bower_components/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2,otf}'
   ])
 
   # Stop gulp from crashing on errors
@@ -201,7 +203,6 @@ gulp.task 'scripts', ->
   # Copy vendor files to output dir
   vendor = gulp.src([
     'bower_components/jquery/dist/jquery.min.*'
-    'bower_components/foundation-sites/dist/foundation.min.js'
     'bower_components/slick-carousel/slick/slick.js'
   ])
 
