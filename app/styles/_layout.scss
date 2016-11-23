@@ -52,8 +52,21 @@
   }
 }
 
-.gallery {
-  margin-top : 2em;
+.work-gallery {
+  margin-top : 1em;
+
+  .gallery-item {
+    margin-top: 1.5em;
+
+    // No top margin if slick is loaded
+    // &.slick-slide {
+    //   margin-top: 0 !important;
+    // }
+  }
+}
+
+.slick-slide {
+  margin-top: 0;
 }
 
 // See more

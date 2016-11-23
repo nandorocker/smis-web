@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 $project-palette: (
   pink: #ffe5e4,
   black: #333,
@@ -44,3 +46,12 @@ $header-sizes: (
     'h6': 16,
   ),
 );
+
+//
+// Slick-Gallery Customizations
+//
+$slick-font-family: "FontAwesome";
+$slick-font-path: "../fonts/";
+$slick-loader-path: "../images/";
+$slick-prev-character: "\f053";
+$slick-next-character: "\f054";
