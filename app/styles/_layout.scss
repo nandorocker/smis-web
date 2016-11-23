@@ -48,6 +48,12 @@
 
     &:nth-child(even) {
       @include sawtooth(#fff);
+
+      // Customize carousel arrows
+      .slick-prev::before,
+      .slick-next::before {
+        color: map-get($project-palette, gray);
+      }
     }
   }
 }
