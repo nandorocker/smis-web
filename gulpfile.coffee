@@ -79,7 +79,7 @@ gulp.task 'html', ->
   config.htmlReplaceTpl = '<base href="%s">'
 
   if config.type
-    config.htmlReplaceSrc = 'http://oxcollective.com/'
+    config.htmlReplaceSrc = '//nandorocker.github.io/smis-web/'
 
   config.htmlReplace = {
     base: {
