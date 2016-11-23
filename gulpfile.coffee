@@ -6,6 +6,7 @@
 gulp = require('gulp')
 gutil = require('gulp-util')  					# Gulp utilities
 gulpIf = require('gulp-if')             # Run pipes conditionally
+ghPages = require('gulp-gh-pages')      # Publish to Github Pages
 changed = require('gulp-changed')       # Only process tasks on changed files
 del = require('del')  						  	  # rm -rf
 sourcemaps = require('gulp-sourcemaps') # sourcemaps for CSS
@@ -262,6 +263,15 @@ gulp.task 'watch', ->
 gulp.task 'watch:pug', [ 'html' ], (done) ->
   browserSync.reload()
   done()
+
+#
+# Deploy
+# ======
+#
+
+gulp.task 'deploy', ->
+  gulp.src(config.outputDir + '/**/*')
+    .pipe(ghPages())
 
 # Gulp restart when gulpfile.js or config.js files are changed
 gulp.task 'watch:gulp', ->

@@ -27,3 +27,4 @@ bower_components
 ## Production/Temp dirs ##
 dist
 .tmp
+.publish
