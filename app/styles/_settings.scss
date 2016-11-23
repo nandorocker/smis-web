@@ -1,10 +1,20 @@
 @charset "UTF-8";
 
+// Colors
+
 $project-palette: (
   pink: #ffe5e4,
   black: #333,
   gray: #666,
   graylite: #CED0CD
+);
+
+$foundation-palette: (
+  primary: #333,
+  secondary: #777,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #ec5840,
 );
 
 $body-background: map-get($project-palette, gray);
@@ -17,17 +27,12 @@ $button-color: $body-font-color;
 // 4. Base Typography
 // ------------------
 $body-font-family: 'acremedium', Helvetica, Roboto, Arial, sans-serif;
-$foundation-palette: (
-  primary: #333,
-  secondary: #777,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #ec5840,
-);
+$paragraph-lineheight: 1.8;
 $anchor-text-decoration: underline;
 $header-font-family: 'Lato', Helvetica, Roboto, Arial, sans-serif;
 $header-font-weight: 800;
 $header-lineheight: 1.1;
+$header-margin-bottom: 1.4rem;
 $header-sizes: (
   small: (
     'h1': 36,
@@ -39,8 +44,8 @@ $header-sizes: (
   ),
   medium: (
     'h1': 55,
-    'h2': 40,
-    'h3': 31,
+    'h2': 42,
+    'h3': 30,
     'h4': 25,
     'h5': 20,
     'h6': 16,

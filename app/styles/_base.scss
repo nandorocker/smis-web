@@ -1,0 +1,6 @@
+// Define responsive paragraph font size
+p {
+  @include breakpoint(large){
+    font-size: 110%;
+  }
+}
