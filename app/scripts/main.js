@@ -15,6 +15,12 @@ $( document ).ready(function() {
 
     responsive: [
       {
+        breakpoint: 768,
+        settings: {
+          autoplay: false
+        }
+      },
+      {
         breakpoint: 600,
         settings: {
           arrows: true,
@@ -25,6 +31,8 @@ $( document ).ready(function() {
       {
         breakpoint: 480,
         settings: {
+          autoplay: true,
+          autoplaySpeed: 2000,
           arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1
