@@ -100,8 +100,14 @@
   margin-top : 0;
 }
 
-.slick-prev:before, .slick-next:before {
+.slick-prev::before, .slick-next::before {
   font-size: 36px;
+}
+
+// Size needs to match the arrow
+.slick-arrow {
+  width: 24px;
+  height: 36px;
 }
 
 // See more
