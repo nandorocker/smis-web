@@ -1,6 +1,7 @@
 extends /_layouts/default.pug
 
 block content
+
   header#top.masthead
     nav.main-nav
       ul
@@ -27,9 +28,7 @@ block content
           p Designs for printed and digital materials for Microsoft Build conference in Warsaw, Poland (2016). Project includes interior design elements, lanyards, posters, streeming graphics etc. I had to strictly follow brand and event guidelines.
 
         #gallery_1.work-gallery
-          .gallery-item: img(src="http://unsplash.it/1024/768?image=0")
-          .gallery-item: img(src="http://unsplash.it/1024/768?image=10")
-          .gallery-item: img(src="http://unsplash.it/1024/768?image=20")
+          +workItem('microsoft-build',9)
 
       article.cell
         .content
@@ -37,9 +36,7 @@ block content
           p Watches designs with leopard pattern motive. Shape of the watch case and theme was specified in the client’s brief.
 
         #gallery_2.work-gallery
-          .gallery-item: img(src="http://unsplash.it/1024/768?image=0")
-          .gallery-item: img(src="http://unsplash.it/1024/768?image=10")
-          .gallery-item: img(src="http://unsplash.it/1024/768?image=20")
+          +workItem('avon',6)
 
       article.cell
         .content
@@ -47,9 +44,7 @@ block content
           p Cover design for legendary Warsaw’s alternative band Partia (1993-2003). Record consists a live recordings of the last band’s concert. Image used on the cover comes from Karel Saudek - czech comic book illustrator. The goal was to design a cover similar to previous ones, but also make it look more modern.
 
         #gallery_3.work-gallery
-          .gallery-item: img(src="http://unsplash.it/1024/768?image=0")
-          .gallery-item: img(src="http://unsplash.it/1024/768?image=10")
-          .gallery-item: img(src="http://unsplash.it/1024/768?image=20")
+          +workItem('partia',7)
 
       article.cell
         .content
@@ -57,9 +52,7 @@ block content
           p Banners are made according to new brand guide lines (color groups, font designed specially for eBay, not posed and simple mood images, products on a plain background).
 
         #gallery_4.work-gallery
-          .gallery-item: img(src="http://unsplash.it/1024/768?image=0")
-          .gallery-item: img(src="http://unsplash.it/1024/768?image=10")
-          .gallery-item: img(src="http://unsplash.it/1024/768?image=20")
+          +workItem('ebay',8)
 
       article.cell
         .content
@@ -67,9 +60,7 @@ block content
           p Moodboards for possible fashion trends in 2015 and examples of products (jewellery, watches, bags and accesories).
 
         #gallery_5.work-gallery
-          .gallery-item: img(src="http://unsplash.it/1024/768?image=0")
-          .gallery-item: img(src="http://unsplash.it/1024/768?image=10")
-          .gallery-item: img(src="http://unsplash.it/1024/768?image=20")
+          +workItem('oriflame',6)
 
   section#see_more.cell.panel
     .content
