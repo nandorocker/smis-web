@@ -233,6 +233,23 @@ gulp.task 'images', ->
   .pipe notify(message: 'Images task complete')
 
 #
+# Copy Assets
+#
+gulp.task 'assets', ->
+  gulp.src(config.sourceDir + '/assets/**/*.{pdf,zip}')
+
+  # Stop gulp from crashing on errors
+  .pipe(plumber(config.plumber))
+
+  # Checks output dir for changes
+  .pipe(changed(config.outputDir))
+
+  .pipe(gulp.dest(config.outputDir + '/assets/'))
+
+  # Send out notification when done
+  .pipe notify(message: 'Assets task complete')
+
+#
 # Task: Deploy (to be used by deploy)
 #
 gulp.task 'deploy', (cb) ->
@@ -258,6 +275,7 @@ gulp.task 'watch', ->
     'styles'
   ]
   gulp.watch config.sourceDir + '/fonts/**/*', [ 'fonts' ]
+  gulp.watch config.sourceDir + '/assets/**/*.{pdf,zip}', ['assets']
   return
 
 gulp.task 'watch:pug', [ 'html' ], (done) ->
@@ -268,7 +286,6 @@ gulp.task 'watch:pug', [ 'html' ], (done) ->
 # Deploy
 # ======
 #
-
 gulp.task 'deploy', ->
   gulp.src(config.outputDir + '/**/*')
     .pipe(ghPages())
@@ -302,6 +319,7 @@ gulp.task 'build', [ 'clean' ], ->
     'images'
     'styles'
     'fonts'
+    'assets'
   ]
 
 # Default task
