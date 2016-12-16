@@ -65,8 +65,8 @@ if config.type
 # Task: Clean output dir
 gulp.task 'clean', ->
   del([
-    config.outputDir + '/**/*',
-    '!dist/.git'
+    config.outputDir + '/**/*'
+    # '!dist/.git'
     '!dist/CNAME'
   ])
 
@@ -80,7 +80,10 @@ gulp.task 'html', ->
   config.htmlReplaceTpl = '<base href="%s">'
 
   if config.type
-    config.htmlReplaceSrc = '//nandorocker.github.io/smis-web/'
+    # Use this when publishing to GitHub
+    # config.htmlReplaceSrc = '//nandorocker.github.io/smis-web/'
+    # Use this publishing to rajewska.com
+    config.htmlReplaceSrc = '//rajewska.com/'
 
   config.htmlReplace = {
     base: {
@@ -234,6 +237,7 @@ gulp.task 'images', ->
 
 #
 # Copy Assets
+# ===========
 #
 gulp.task 'assets', ->
   gulp.src(config.sourceDir + '/assets/**/*.{pdf,zip}')
@@ -250,9 +254,23 @@ gulp.task 'assets', ->
   .pipe notify(message: 'Assets task complete')
 
 #
+# Copy CNAME
+# ===========
+#
+gulp.task 'cname', ->
+  gulp.src(config.sourceDir + '/CNAME')
+
+  # Stop gulp from crashing on errors
+  .pipe(plumber(config.plumber))
+
+  # Checks output dir for changes
+  .pipe(changed(config.outputDir))
+
+  .pipe(gulp.dest(config.outputDir))
+
+#
 # Watcher
 # =======
-# =====
 #
 
 gulp.task 'watch', ->
@@ -309,6 +327,7 @@ gulp.task 'build', [ 'clean' ], ->
     'styles'
     'fonts'
     'assets'
+    'cname'
   ]
 
 # Default task
