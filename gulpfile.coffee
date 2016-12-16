@@ -250,17 +250,6 @@ gulp.task 'assets', ->
   .pipe notify(message: 'Assets task complete')
 
 #
-# Task: Deploy (to be used by deploy)
-#
-gulp.task 'deploy', (cb) ->
-
-  exec('cd dist && git add . && git commit -m "Update ' + Date.now() + '" && git push origin gh-pages', (err, stdout, stderr) ->
-    console.log(stdout)
-    console.log(stderr)
-    cb(err)
-  )
-
-#
 # Watcher
 # =======
 # =====
