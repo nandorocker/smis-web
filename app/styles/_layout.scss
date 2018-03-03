@@ -1,7 +1,7 @@
 // // Top nav
 
 .masthead {
-  @include flex-grid-row();
+  @include flex-grid-row(null,expand);
   @include flex-align(center);
   background-color : map-get($project-palette, pink);
 
@@ -42,7 +42,7 @@
 // Cells are re-usable sections.
 
 .cell {
-  @include flex-grid-row();
+  @include flex-grid-row(null,expand);
   @include flex-align(center);
   padding-top      : 4em;
   padding-bottom   : 6em;
@@ -150,7 +150,7 @@
 // Footer
 
 .footer {
-  @include flex-grid-row();
+  @include flex-grid-row(null,expand);
   @include flex-align(center);
 
   padding-top      : 1.5em;
