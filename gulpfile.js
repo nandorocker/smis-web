@@ -331,7 +331,7 @@ gulp.task('watch:gulp', function() {
 // Development Server
 gulp.task('serve', [ 'build' ], function(done) {
   browserSync.init({
-    open: false,
+    open: true,
     port: 9000,
     server: config.outputDir
   }, done);
