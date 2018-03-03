@@ -268,6 +268,15 @@ gulp.task('assets', () =>
   .pipe(notify({message: 'Assets task complete'}))
 );
 
+// 
+// Copy Favicons
+// =============
+// 
+gulp.task('favicons', () =>
+  gulp.src(config.sourceDir + '/assets/favicons/**/*')
+  .pipe(gulp.dest(config.outputDir))
+);
+
 //
 // Copy CNAME
 // ===========
@@ -346,6 +355,7 @@ gulp.task('build', [ 'clean' ], () =>
     'styles',
     'fonts',
     'assets',
+    'favicons',
     'cname'
   ])
 );
