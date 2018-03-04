@@ -13,7 +13,7 @@ $( document ).ready(function() {
   const slickSettings = {
     // autoplay: true,
     // autoplaySpeed: 2000,
-    lazyLoad: 'ondemand',
+    lazyLoad: 'progressive',
     slidesToShow: 1,
     slidesToScroll: 1,
 
