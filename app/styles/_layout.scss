@@ -53,6 +53,10 @@
     @include breakpoint(large) {
       @include flex-grid-column(8);
     }
+
+    @include breakpoint(xlarge) {
+      @include flex-grid-column(7);
+    }
   }
 }
 
@@ -161,6 +165,18 @@
     @include menu-base;
     width: auto;
     margin-bottom : 0;
+
+    @include breakpoint(small only) {
+      a {
+        padding: 0 0.5rem;
+      }
+    }
+
+    @include breakpoint(large) {
+      li {
+        font-size: 1.4em;
+      }
+    }
   }
 }
 
