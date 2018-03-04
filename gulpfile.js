@@ -342,6 +342,7 @@ gulp.task('serve', [ 'build' ], function(done) {
   browserSync.init({
     open: true,
     port: 9000,
+    ghostMode: false,
     server: config.outputDir
   }, done);
 });
