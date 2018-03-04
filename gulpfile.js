@@ -328,7 +328,7 @@ gulp.task('deploy', () =>
 gulp.task('watch:gulp', function() {
   let p = undefined;
   gulp.watch([
-    'gulpfile.coffee'
+    'gulpfile.js'
   ], function() {
     if (p) {
       p.kill();
