@@ -160,24 +160,6 @@
   padding-top      : 1.5em;
   padding-bottom   : 3.5em;
   background-image : url('../images/white_marble_texture.jpg');
-
-  ul {
-    @include menu-base;
-    width: auto;
-    margin-bottom : 0;
-
-    @include breakpoint(small only) {
-      a {
-        padding: 0 0.5rem;
-      }
-    }
-
-    @include breakpoint(large) {
-      li {
-        font-size: 1.4em;
-      }
-    }
-  }
 }
 
 // Social icons
@@ -193,5 +175,22 @@
   a:hover,
   a:visited {
     text-decoration : none;
+  }
+
+  @include menu-base;
+  width: auto;
+  margin-bottom : 0;
+  justify-content: center;
+
+  @include breakpoint(small only) {
+    a {
+      padding: 0 0.5rem;
+    }
+  }
+
+  @include breakpoint(large) {
+    li {
+      font-size: 1.4em;
+    }
   }
 }
