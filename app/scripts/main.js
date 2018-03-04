@@ -1,13 +1,16 @@
 $( document ).ready(function() {
   // console.log( "ready!" );
 
+  // 
+  // SLICK CAROUSEL
+  // 
   // Count carousel instances on page (items with class .work-gallery)
   // Add a unique ID to each carousel
-  var carouselCount = $('.work-gallery').length;
+  const carouselCount = $('.work-gallery').length;
 
   // Slick Carousel Configuration
 
-  var slickSettings = {
+  const slickSettings = {
     // autoplay: true,
     // autoplaySpeed: 2000,
     lazyLoad: 'ondemand',
@@ -46,4 +49,13 @@ $( document ).ready(function() {
   for (i = 1; i <= carouselCount; i++){
     $('#gallery_' + i).slick(slickSettings);
   }
+
+  // 
+  // Medium Zoom
+  // 
+  const mediumZoomSettings = {
+    background: '#333',
+    margin: 24
+  }
+  mediumZoom('.gallery-item img', mediumZoomSettings);
 });

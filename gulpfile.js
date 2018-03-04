@@ -219,7 +219,8 @@ gulp.task('scripts', function() {
   // Copy vendor files to output dir
   const vendor = gulp.src([
     'node_modules/jquery/dist/jquery.min.*',
-    'node_modules/slick-carousel/slick/slick.js'
+    'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/medium-zoom/dist/medium-zoom.min.js'
   ])
 
   .pipe(gulp.dest(config.outputDir + '/scripts/vendor'));

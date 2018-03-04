@@ -16,3 +16,6 @@
 * [slick carousel](https://github.com/kenwheeler/slick/)
 	* nice customizable responsive carousel
 	* Initialized on main.js
+* [medium-zoom](https://github.com/francoischalifour/medium-zoom)
+	* pretty great, plain JavaScript image zoomer
+	* almost no settings
