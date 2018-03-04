@@ -10,6 +10,7 @@ $( document ).ready(function() {
   var slickSettings = {
     // autoplay: true,
     // autoplaySpeed: 2000,
+    lazyLoad: 'ondemand',
     slidesToShow: 1,
     slidesToScroll: 1,
 

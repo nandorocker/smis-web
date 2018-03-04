@@ -2,7 +2,7 @@
 mixin workItem(title,max)
 	- for (var i = 1; i < max; ++i)
 		.gallery-item
-			img(src="assets/projects/" + title + "/" + title + "-" + i + ".png")
+			img(data-lazy="assets/projects/" + title + "/" + title + "-" + i + ".png")
 
 mixin socialList()
 	ul.social
