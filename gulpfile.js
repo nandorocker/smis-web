@@ -193,7 +193,7 @@ gulp.task('fonts', () =>
   .pipe(gulp.dest(config.outputDir + '/fonts'))
 
   // Send out notification when done
-  .pipe(notify({message: 'Fonts task complete'}))
+  .pipe(notify({message: 'Fonts task complete', onLast: true}))
 );
 
 //
@@ -247,7 +247,7 @@ gulp.task('images', () =>
   .pipe(gulp.dest(config.outputDir))
 
   // Send out notification when done
-  .pipe(notify({message: 'Images task complete'}))
+  .pipe(notify({message: 'Images task complete', onLast: true}))
 );
 
 //
