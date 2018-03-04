@@ -160,6 +160,13 @@
   padding-top      : 1.5em;
   padding-bottom   : 3.5em;
   background-image : url('../images/white_marble_texture.jpg');
+
+  text-align: center;
+
+  .copyright {
+    margin-top: 3rem;
+    font-size: .8em;
+  }
 }
 
 // Social icons
@@ -193,4 +200,10 @@
       font-size: 1.4em;
     }
   }
+
+  // @include breakpoint(xsmall only) {
+  //   li {
+  //     font-size: 0.8em;
+  //   }
+  // }
 }
